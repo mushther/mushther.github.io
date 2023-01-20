@@ -4,6 +4,7 @@ import { FaCss3, FaDownload, FaReact } from "react-icons/fa";
 import { TbBrandJavascript } from 'react-icons/tb'
 import { AiFillHtml5 } from "react-icons/ai"
 import { BsGithub } from "react-icons/bs"
+import Resume from '../Data/Mushther-Hussain-Resume.pdf'
 const Home = () => {
     return (
         <Box
@@ -28,7 +29,7 @@ const Home = () => {
                 <Heading fontSize={80}>Mushther Hussain</Heading>
                 <Heading color={'yellow.300'} size={'xl'}> Full Stack Web Developer</Heading>
                 <br />
-                <a href="../Data/Mushther-Hussain-Resume.pdf" download>
+                <a href={Resume} download>
                     <Button colorScheme='yellow' color={'midnightblue'} fontSize={16} fontWeight={'bold'} gap={2} as='a' ><FaDownload />Resume</Button>
                 </a>
                 <br />
