@@ -12,7 +12,7 @@ const Home = () => {
             m={'auto'}
             w={'100%'}
             h={'auto'}
-            p={20}
+            p={"180px 40px 90px 40px"}
             border={"0px solid red"}
             style={{
                 background: 'linear-gradient(black, midnightblue)'
@@ -28,7 +28,9 @@ const Home = () => {
                 <Heading fontSize={80}>Mushther Hussain</Heading>
                 <Heading color={'yellow.300'} size={'xl'}> Full Stack Web Developer</Heading>
                 <br />
-                <Button colorScheme='yellow' color={'midnightblue'} fontSize={16} fontWeight={'bold'} gap={2}><FaDownload />Resume</Button>
+                <a href="../Data/Mushther-Hussain-Resume.pdf" download>
+                    <Button colorScheme='yellow' color={'midnightblue'} fontSize={16} fontWeight={'bold'} gap={2} as='a' ><FaDownload />Resume</Button>
+                </a>
                 <br />
                 <br />
                 <Box display={'flex'} gap={2} fontSize={'5xl'}>
