@@ -1,11 +1,11 @@
-import { Heading, Box, Input, Button, Text, FormControl, FormLabel, Tooltip, useClipboard } from '@chakra-ui/react'
+import { Heading, Box, Text, Tooltip, useClipboard, useMediaQuery } from '@chakra-ui/react'
 import React from 'react'
-import { FaGithub, FaLinkedin, FaPaperPlane, FaPhoneAlt, FaRegEnvelope } from 'react-icons/fa'
-import { } from 'react-router-dom'
+import { FaGithub, FaLinkedin, FaPhoneAlt, FaRegEnvelope } from 'react-icons/fa'
+import { ContactForm } from './ContactForm';
 
 const Contacts = () => {
-
     const { hasCopied, onCopy } = useClipboard("mushther2121999@gmail.com");
+    const [isLargerThan480] = useMediaQuery('(min-width: 681px)');
 
     return (
         <Box style={{
@@ -14,35 +14,22 @@ const Contacts = () => {
 
         }}>
             <Box
-                w={'100%'}
+                w={'auto'}
                 m='auto'
                 h={'auto'}
-                p={'70px 195px 70px 195px'}
+                p={isLargerThan480 ? '70px 195px 70px 195px' : '20px'}
 
-                display='flex'
+                display={'flex'}
+                flexDirection={isLargerThan480 ? 'row' : 'column'}
                 justifyContent={'space-around'}
             >
                 <Box>
                     <Heading size={'md'}>Get in Touch</Heading>
                     <Heading size={'md'} color={'yellow'}>Contact me</Heading>
                 </Box>
-                <FormControl w={'70%'} textAlign={'start'}>
-                    <FormLabel>Name</FormLabel>
-                    <Input color='white' placeholder='Name' />
-                    <br />
-                    <br />
-                    <FormLabel>Email</FormLabel>
-                    <Input placeholder='Email' />
-                    <br />
-                    <br />
-                    <FormLabel>Message</FormLabel>
-                    <Input placeholder='Message' />
-                    <br />
-                    <br />
-                    <Button colorScheme={'yellow'} gap={3}>Send Message<FaPaperPlane /></Button>
-                </FormControl>
+                <ContactForm />
             </Box>
-            <Box mb={10} display={'flex'} justifyContent='center' gap={5} fontSize={40}>
+            <Box mb={10} display={'flex'} justifyContent='center' gap={5} fontSize={isLargerThan480 ? 40 : 25}>
                 <Tooltip
                     label={hasCopied ? "Email Copied!" : "Copy Email"}
                 >

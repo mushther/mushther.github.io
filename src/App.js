@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import './App.css';
+import FloatingMouse from './Components/FloatingMouse';
 import Navbar from './Components/Navbar';
 import Sidenav from './Components/Sidenav';
 import About from './pages/About';
@@ -12,6 +13,7 @@ function App() {
     <div className='App'>
       <Navbar/>
       <Sidenav/>
+      <FloatingMouse/>
       <Home/>
       <About/>
       <Skills/>

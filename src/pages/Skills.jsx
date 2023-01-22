@@ -1,30 +1,33 @@
-import { Box, Grid, GridItem, Heading, Image } from '@chakra-ui/react'
+import { Box, Grid, GridItem, Heading, Image, useMediaQuery } from '@chakra-ui/react'
 import React from 'react'
+import { GiBrain } from "react-icons/gi";
 
 const Skills = () => {
+    const [isLargerThan480] = useMediaQuery('(min-width: 981px)');
+
     return (
         <Box>
             <Box
-                w={'100%'}
+                w={'auto'}
                 m='auto'
                 h={'auto'}
-                p={'70px 195px 20px 195px'}
+                p={isLargerThan480 ? '70px 195px 20px 195px' : "10px"}
                 style={{
                     background: 'linear-gradient(black,midnightblue)'
                 }}>
-                <Heading textAlign={'start'} textDecoration={'underline'}>Skills</Heading>
+                <Heading textAlign={'start'} textDecoration={'underline'} display='flex' size={isLargerThan480 ? 'xl' : 'md'} gap={3} alignItems={'center'}><GiBrain />Skills</Heading>
 
             </Box>
             <Box
-                w={'100%'}
+                w={'auto'}
                 m='auto'
                 h={'auto'}
-                p={'0px 195px 70px 195px'}
+                p={isLargerThan480 ? '0px 195px 70px 195px' : '30px'}
                 style={{
                     background: 'linear-gradient(midnightblue,midnightblue)'
                 }}
             >
-                <Grid templateColumns='repeat(3, 1fr)' gap={20} alignItems={'center'} justifyContent={'center'} p={'50px 0px 0px 0px'}>
+                <Grid templateColumns={isLargerThan480 ? 'repeat(3, 1fr)' : 'repeat(1,1fr)'} gap={20} alignItems={'center'} justifyContent={'center'} p={'50px 0px 0px 0px'}>
                     <GridItem
                         _hover={{
                             boxShadow: 'rgb(254, 81, 0) 0px 5px 10px 1px'
