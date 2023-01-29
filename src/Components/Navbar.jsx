@@ -72,9 +72,9 @@ const Navbar = () => {
                     <Heading size={'md'} display={'flex'} m='auto' gap={'10px'} w='40%' alignItems='center' justifyContent={'start'} onClick={() => handleClick(5400)} >
                         <MdContactPhone /> <span>Contact Us</span>
                     </Heading>
-
-
-
+                    <Heading size={'md'} display={'flex'} m='auto' gap={'10px'} w='40%' alignItems='center' justifyContent={'start'} as='a' href='https://drive.google.com/file/d/1Y5zCHEVq8jYXvszYZY-HwaIwCzxPFFzl/view?usp=sharing' >
+                        <FaFileAlt /> <span>Resume</span>
+                    </Heading>
                 </Box>
                 : null
             }
