@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react';
+import { Box, useMediaQuery } from '@chakra-ui/react';
 import './App.css';
 import FloatingMouse from './Components/FloatingMouse';
 import Navbar from './Components/Navbar';
@@ -9,11 +9,13 @@ import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Skills from './pages/Skills';
 function App() {
+  const [isLargerThan480] = useMediaQuery('(min-width: 681px)');
+
   return (
     <div className='App'>
       <Navbar/>
-      <Sidenav/>
-      <FloatingMouse/>
+      {isLargerThan480 ? <Sidenav/> : null}
+      {isLargerThan480 ? <FloatingMouse/> : null}
       <Home/>
       <About/>
       <Skills/>

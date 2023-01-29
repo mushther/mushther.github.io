@@ -31,7 +31,7 @@ const FloatingMouse = () => {
     //console.log(window.innerHeight)
     return (
         <>
-            {flag && <Box position={'fixed'} top={isLargerThan480 ? '650px' : '660px'} left={isLargerThan480 ? "1450px" : "340px"} >
+            {flag && <Box position={'fixed'} top={isLargerThan480 ? '650px' : '700px'} left={isLargerThan480 ? "1450px" : "340px"} >
                 <Button bg={'none'} height={isLargerThan480 ? "52px" : "47px"} border={"1px solid yellow"} borderRadius={"50%"} onClick={() => handleClick(0)} >
                     <FaArrowUp
                         fontSize={isLargerThan480 ? 20 : 16}

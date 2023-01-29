@@ -1,6 +1,6 @@
 import { Heading, Box, Text, Tooltip, useClipboard, useMediaQuery } from '@chakra-ui/react'
 import React from 'react'
-import { FaGithub, FaLinkedin, FaPhoneAlt, FaRegEnvelope } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaPhoneAlt, FaRegEnvelope, FaWhatsapp } from 'react-icons/fa'
 import { ContactForm } from './ContactForm';
 
 const Contacts = () => {
@@ -30,26 +30,34 @@ const Contacts = () => {
                 <ContactForm />
             </Box>
             <Box mb={10} display={'flex'} justifyContent='center' gap={5} fontSize={isLargerThan480 ? 40 : 25}>
-                <Tooltip
-                    label={hasCopied ? "Email Copied!" : "Copy Email"}
-                >
-                    <Text onClick={onCopy}><FaRegEnvelope /></Text>
-                </Tooltip>
-                <Tooltip
-                    label={hasCopied ? "Number Copied!" : "Copy Number"}
-                >
-                    <Text onClick={onCopy}><FaPhoneAlt /></Text>
-                </Tooltip>
+                {isLargerThan480 ?
+                    <Tooltip
+                        label={hasCopied ? "Email Copied!" : "Copy Email"}
+                    >
+                        <Text onClick={onCopy}><FaRegEnvelope /></Text>
+                    </Tooltip>
+                    :
+                    <Text as='a' href='mailto:mushther2121999@gmail.com?body=Write me an E-Mail'><FaRegEnvelope /></Text>
+                }
+                {isLargerThan480 ?
+                    <Tooltip
+                        label={hasCopied ? "Number Copied!" : "Copy Number"}
+                    >
+                        <Text onClick={onCopy}><FaPhoneAlt /></Text>
+                    </Tooltip> :
+                    <Text as='a' href='tel:+91 869 950 6591'><FaPhoneAlt /></Text>
+                }
+                <Text as='a' href='https://api.whatsapp.com/send?phone=8699506591'><FaWhatsapp /></Text>
                 <Text as='a' href='https://github.com/mushther'><FaGithub /></Text>
                 <Text as='a' href='https://www.linkedin.com/in/mushther-h-37a561132/'><FaLinkedin /></Text>
 
             </Box>
-            <Box >
-                <Text as='kbd' >Contact :- +91 8699506591</Text>
+            <Box p='10px'>
+                <Text fontSize={'13px'} as='kbd' >Contact :- +91 8699506591</Text>
                 <br />
-                <Text as='kbd' >Email :- mushther2121999@gmail.com</Text>
+                <Text fontSize={'13px'} as='kbd' >Email :- mushther2121999@gmail.com</Text>
                 <br />
-                <Text as='kbd' >Designed and build by Mushther Hussain, 2022 All rights reserved</Text>
+                <Text fontSize={'13px'} as='kbd' >Designed and build by Mushther Hussain, 2022 All rights reserved</Text>
             </Box>
         </Box>
     )

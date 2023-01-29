@@ -14,18 +14,18 @@ const ProjectCard = ({ PNG, ProjectName, ProjectTech, ProjectDiscription, Src_Gi
             w='auto'
             h='auto'
             m={'auto'}
-            border={'1px dashed yellow'}
+            //border={'1px dashed yellow'}
             p={isLargerThan480 ? 4 : 2}
-            bg={'midnightblue'}
+            // bg={'midnightblue'}
             borderRadius={'3xl'}
-            boxShadow={'rgb(244, 220, 4) 0px 5px 10px 1px'}
+            boxShadow={'white 0px 5px 10px 1px'}
             direction={isLargerThan480 ? 'row' : 'column'}
         >
             <Box
                 //borderRadius={'15px 0px 0px 15px'}
                 // borderLeft='1px solid yellow'
-                //borderBottom='1px dashed yellow'
-                //borderTop='1px dashed yellow'
+                //  borderBottom='1px dashed yellow'
+                //  borderTop='1px dashed yellow'
                 // p={"10px"}
                 m={'auto'}
             >
@@ -37,7 +37,7 @@ const ProjectCard = ({ PNG, ProjectName, ProjectTech, ProjectDiscription, Src_Gi
                     borderRadius={isLargerThan480 ? '15px 0px 0px 15px' : '15px 15px 15px 15px'}
                     w={isLargerThan480 ? '1600px' : '320px'}
                     h={isLargerThan480 ? '400px' : '170px'}
-
+                    boxShadow={' rgba(0, 0, 0, 0.35) 0px 5px 15px'}
                     src={PNG} />
             </Box>
             <Grid p={isLargerThan480 ? "30px 40px 40px 80px" : "10px"}

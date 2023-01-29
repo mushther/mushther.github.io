@@ -1,10 +1,12 @@
-import { Box } from '@chakra-ui/react'
+import { Box, useMediaQuery } from '@chakra-ui/react'
 import React from 'react'
 import { useState } from 'react'
 import { FaArrowAltCircleLeft, FaBookOpen, FaGripLinesVertical, FaHome, FaInfoCircle, FaWhmcs } from 'react-icons/fa'
 import { MdContactPhone } from "react-icons/md"
 const Sidenav = () => {
     const [toggle, setToggle] = useState(false);
+    const [isLargerThan480] = useMediaQuery('(min-width: 681px)');
+
 
     const handleToggle = () => {
         setToggle(true)
@@ -42,10 +44,10 @@ const Sidenav = () => {
                     bg={'midnightblue'}
                 >
                     <FaHome onClick={() => handleClick(0)} />
-                    <FaInfoCircle onClick={() => handleClick(500)} />
-                    <FaBookOpen onClick={() => handleClick(1000)} />
-                    <FaWhmcs onClick={() => handleClick(1880)} />
-                    <MdContactPhone onClick={() => handleClick(3000)} />
+                    <FaInfoCircle onClick={() => handleClick(isLargerThan480 ? 500 : 600)} />
+                    <FaBookOpen onClick={() => handleClick(isLargerThan480 ? 1000 : 1190)} />
+                    <FaWhmcs onClick={() => handleClick(isLargerThan480 ? 1880 : 3080)} />
+                    <MdContactPhone onClick={() => handleClick(isLargerThan480 ? 4100 : 5400)} />
                     <FaArrowAltCircleLeft onClick={handleToggle1} />
                 </Box>
                 <Box

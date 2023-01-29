@@ -29,13 +29,13 @@ export const ContactForm = () => {
             textAlign: 'start'
         }}>
             <FormLabel>Name</FormLabel>
-            <Input type="text" name="user_name" placeholder='Name' />
+            <Input position={'none'} type="text" name="user_name" placeholder='Name' />
             <FormLabel>Email</FormLabel>
-            <Input type="email" name="user_email" placeholder={'Email'} />
+            <Input position={'none'} type="email" name="user_email" placeholder={'Email'} />
             <FormLabel>Message</FormLabel>
-            <Textarea name="message" placeholder={'Message'} />
+            <Textarea position={'none'} name="message" placeholder={'Message'} />
             <FormLabel></FormLabel>
-            <Button type='submit' w={isLargerThan480 ? "" : '100%'} colorScheme='yellow' gap={3}>Send Message <FaPaperPlane /></Button>
+            <Button position={'none'} type='submit' w={isLargerThan480 ? "" : '100%'} colorScheme='yellow' gap={3}>Send Message <FaPaperPlane /></Button>
 
         </form>
     );
