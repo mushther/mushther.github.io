@@ -19,7 +19,7 @@ const Navbar = () => {
     }
     //contact
     return (
-        <Box w={'100%'} bgGradient='linear(to-r, black, midnightblue)' position={'fixed'} border={'0px solid yellow'}>
+        <Box w={'100%'} bgGradient={isTrue ? 'linear(to-r, black, midnightblue)' : 'linear(to-r, black, black)'} position={'fixed'} border={'0px solid yellow'}>
             <Box
                 display={'flex'}
                 justifyContent={'space-between'}
@@ -56,7 +56,7 @@ const Navbar = () => {
                 }
             </Box>
             {isTrue ?
-                <Box bgGradient='linear(to-r, black, midnightblue)' border={'0px solid red'} p={'15px 15px 35px 15px'} display='grid' gap='20px' behavior='smooth'>
+                <Box bgGradient='linear(to-r,black, midnightblue )' border={'0px solid red'} p={'15px 15px 35px 15px'} display='grid' gap='20px' behavior='smooth'>
                     <Heading size={'md'} display={'flex'} m='auto' gap={'10px'} w='40%' alignItems='center' justifyContent={'start'} onClick={() => handleClick(0)} >
                         <FaHome /> <span>Home</span>
                     </Heading>

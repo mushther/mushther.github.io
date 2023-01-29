@@ -47,7 +47,7 @@ const Home = () => {
                 mt={7}
             >
                 <Heading border={'1px solid white'} p={isLargerThan480 ? 2 : 1} fontSize={isLargerThan480 ? 20 : 13} borderRadius={'20px 20px 20px 0px'} w={isLargerThan480 ? '17%' : "23%"} color={'yellow.300'}>Hello I'm</Heading >
-                <Heading fontSize={isLargerThan480 ? 80 : 40}>Mushther Hussain</Heading>
+                <Heading fontSize={isLargerThan480 ? 80 : 40} p={0}>Mushther Hussain</Heading>
                 {/* <Heading color={'yellow.300'} size={isLargerThan480 ? 'xl' : 'sm'}> Full Stack Web Developer</Heading> */}
                 <Heading color={'yellow.300'} mb={isLargerThan480 ? 5 : 2} size={isLargerThan480 ? 'xl' : 'sm'}>
                     <span style={{ color: 'white' }}>I'm a </span>{text}
