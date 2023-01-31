@@ -35,13 +35,13 @@ const Sidenav = () => {
                     display={'grid'}
                     gap={4}
                     fontSize={'2xl'}
-                    color={'yellow'}
+                    color={'white'}
                     p={3}
                     borderRight="4px solid yellow"
                     borderTop="0.1px solid yellow"
                     borderBottom="0.5px solid yellow"
                     borderRadius={"0px 20px 20px 0px"}
-                    bg={'midnightblue'}
+                    bg={'#092637'}
                 >
                     <FaHome onClick={() => handleClick(0)} />
                     <FaInfoCircle onClick={() => handleClick(isLargerThan480 ? 500 : 600)} />
@@ -52,7 +52,7 @@ const Sidenav = () => {
                 </Box>
                 <Box
                     onClick={handleToggle1}
-                    bg={'midnightblue'}
+                    bg={'#092637'}
                     color={'yellow'}
                     fontSize={'sm'}
                     m={0.3}
@@ -71,7 +71,7 @@ const Sidenav = () => {
                 top={300}
                 display={'flex'}
                 alignItems={'center'}
-                bg={'midnightblue'}
+                bg={'#092637'}
                 color={'yellow'}
                 fontSize={'sm'}
                 m={0.3}

@@ -9,7 +9,7 @@ const Contacts = () => {
 
     return (
         <Box style={{
-            background: 'linear-gradient(black, midnightblue)',
+            background: '#092637',
             paddingBottom: '15px'
 
         }}>

@@ -19,7 +19,7 @@ const Projects = () => {
             h={'auto'}
             p={isLargerThan480 ? '70px 195px 70px 195px' : '30px'}
             style={{
-                background: 'linear-gradient(midnightblue,black)'
+                background: '#092637'
             }}
         >
             <Heading p={'0px 0px 50px 0px'} textAlign={'start'} textDecoration={'underline'} display='flex' gap={3} alignItems={'center'} size={isLargerThan480 ? 'xl' : 'md'}><FaProjectDiagram />Project's</Heading>

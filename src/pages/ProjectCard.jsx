@@ -8,25 +8,19 @@ const ProjectCard = ({ PNG, ProjectName, ProjectTech, ProjectDiscription, Src_Gi
     return (
         <Flex _hover={{
             transform: 'scale(1)',
-            transition: ' 1s'
-        }}
+            transition: ' 1s',
+            boxShadow: '#0479ffdd 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset'
 
+        }}
             w='auto'
             h='auto'
             m={'auto'}
-            //border={'1px dashed yellow'}
             p={isLargerThan480 ? 4 : 2}
-            // bg={'midnightblue'}
+            bg={'#082231'}
             borderRadius={'3xl'}
-            boxShadow={'white 0px 5px 10px 1px'}
             direction={isLargerThan480 ? 'row' : 'column'}
         >
             <Box
-                //borderRadius={'15px 0px 0px 15px'}
-                // borderLeft='1px solid yellow'
-                //  borderBottom='1px dashed yellow'
-                //  borderTop='1px dashed yellow'
-                // p={"10px"}
                 m={'auto'}
             >
                 <Image _hover={{
@@ -42,10 +36,6 @@ const ProjectCard = ({ PNG, ProjectName, ProjectTech, ProjectDiscription, Src_Gi
             </Box>
             <Grid p={isLargerThan480 ? "30px 40px 40px 80px" : "10px"}
                 border='0px solid red'
-            //  borderRadius={'0px 15px 15px 0px'}
-            //  borderRight='1px solid yellow'
-            // borderBottom='1px solid yellow'
-            // borderTop='1px solid yellow'
             >
                 <Heading size={isLargerThan480 ? '2xl' : 'xl'} textAlign={'start'}>{ProjectName}</Heading>
                 <br />
@@ -54,8 +44,30 @@ const ProjectCard = ({ PNG, ProjectName, ProjectTech, ProjectDiscription, Src_Gi
                 <Heading size={'xs'} textAlign={'start'}>Tech Stack: {ProjectTech}</Heading>
                 <br />
                 <Flex justifyContent={'space-between'} alignItems={'start'} gap={5}>
-                    <Button position={'none'} colorScheme={'yellow'} color={'midnightblue'} fontWeight={'bold'} gap={2} as='a' href={Src_netlify} ><FaExternalLinkSquareAlt /> Live</Button>
-                    <Button position={'none'} colorScheme={'yellow'} color={'midnightblue'} fontWeight={'bold'} gap={2} as='a' href={Src_Git} ><FaEye fontSize={20} /> View Code</Button>
+                    <Button
+                        _hover={{
+                            bg: '#0479ffdd',
+                            border: '0px solid white'
+                        }}
+                        position={'none'}
+                        colorScheme={'none'}
+                        color={'white'}
+                        bg='#092637'
+                        fontWeight={'bold'}
+                        gap={2} as='a'
+                        href={Src_netlify} ><FaExternalLinkSquareAlt /> Live</Button>
+
+                    <Button
+                        _hover={{
+                            bg: '#0479ffdd'
+                        }}
+                        position={'none'}
+                        colorScheme={'none'}
+                        color={'white'}
+                        bg='#092637'
+                        fontWeight={'bold'}
+                        gap={2} as='a'
+                        href={Src_Git} ><FaEye fontSize={20} /> View Code</Button>
                 </Flex>
             </Grid>
         </Flex>

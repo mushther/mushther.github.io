@@ -11,7 +11,9 @@ const About = () => {
             h={'auto'}
             p={isLargerThan480 ? '70px 195px 70px 195px' : '25px'} textAlign='start'
             style={{
-                background: 'linear-gradient(midnightblue,black)'
+                background: '#092637',
+
+
             }}
         >
             <Heading textDecoration={'underline'} display='flex' gap={3} size={isLargerThan480 ? "xl" : "lg"} alignItems={'center'}><BsInfoCircle />About</Heading>

@@ -20,24 +20,14 @@ const Skills = () => {
                 w={'auto'}
                 m='auto'
                 h={'auto'}
-                p={isLargerThan480 ? '70px 195px 20px 195px' : "10px"}
+                p={isLargerThan480 ? '0px 195px 70px 195px' : '25px'}
                 style={{
-                    background: 'linear-gradient(black,midnightblue)'
-                }}>
-                <Heading textAlign={'start'} textDecoration={'underline'} display='flex' size={isLargerThan480 ? 'xl' : 'md'} gap={3} alignItems={'center'}><GiBrain />Skills</Heading>
-
-            </Box>
-            <Box
-                w={'auto'}
-                m='auto'
-                h={'auto'}
-                p={isLargerThan480 ? '0px 195px 70px 195px' : '30px'}
-                style={{
-                    background: 'linear-gradient(midnightblue,midnightblue)'
+                    background: '#092637'
                 }}
             >
+                <Heading textAlign={'start'} textDecoration={'underline'} display='flex' size={isLargerThan480 ? 'xl' : 'md'} gap={3} alignItems={'center'}><GiBrain />Skills</Heading>
 
-                <Grid templateColumns={isLargerThan480 ? 'repeat(3, 1fr)' : 'repeat(1,1fr)'} gap={20} alignItems={'center'} justifyContent={'center'} p={'50px 0px 0px 0px'}>
+                <Grid templateColumns={isLargerThan480 ? 'repeat(4, 1fr)' : 'repeat(2,1fr)'} gap={isLargerThan480 ? 10 : 5} alignItems={'center'} justifyContent={'center'} p={'50px 0px 0px 0px'}>
 
                     <SkilllCard PNG={PNG_HTML} skill_name={"HTML"} hover_shadowColor={'rgb(254, 81, 0) 0px 5px 10px 1px'} />
 

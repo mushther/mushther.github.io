@@ -1,25 +1,50 @@
-import React from 'react'
+import { useEffect, useState } from 'react';
 import { Box, Heading, Button, useMediaQuery } from '@chakra-ui/react'
 import { FaBars, FaBookOpen, FaFileAlt, FaHome, FaInfoCircle, FaWhmcs } from "react-icons/fa";
 import { MdContactPhone } from 'react-icons/md';
 import { RxCross1 } from 'react-icons/rx';
 
-import { useState } from 'react';
 const Navbar = () => {
     const [isLargerThan480] = useMediaQuery('(min-width: 681px)');
     const [isTrue, setIsTrue] = useState(false)
+    const [flag, setFlag] = useState(false)
 
     const handleClick = (n) => {
         window.scrollTo({
             top: n,
             left: 0,
-            behavior: 'smooth'
+            behavior: 'smooth',
+            transition: '1s'
         });
         setIsTrue(false)
     }
+
+    const listenToScroll = () => {
+        let heigthToHidden = 2;
+        const windowScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        if (windowScroll > heigthToHidden) {
+            setFlag(true)
+        } else {
+            setFlag(false)
+        }
+    }
+    useEffect(() => {
+        window.addEventListener('scroll', listenToScroll);
+        return () => window.removeEventListener("scroll", listenToScroll);
+    }, [])
+
     //contact
     return (
-        <Box w={'100%'} bgGradient={isTrue ? 'linear(to-r, black, midnightblue)' : 'linear(to-r, black, black)'} position={'fixed'} border={'0px solid yellow'}>
+        <Box
+            w={'100%'}
+            //bg={flag ? '#092637' : '#092637'}
+            filter='auto'
+            position={'fixed'}
+            border={'0px solid yellow'}
+            transform="none"
+            background={flag ? 'rgba(102, 178, 255, 0.3)' : '#092637'}
+            backdropFilter='blur(10px)'
+        >
             <Box
                 display={'flex'}
                 justifyContent={'space-between'}
@@ -43,8 +68,8 @@ const Navbar = () => {
                 >
                     <Button color="white" colorScheme={'yellow'} bg={'none'} fontSize={18} onClick={() => handleClick(0)} >Home</Button >
                     <Button color="white" colorScheme={'yellow'} bg={'none'} fontSize={18} onClick={() => handleClick(500)} >About</Button >
-                    <Button color="white" colorScheme={'yellow'} bg={'none'} fontSize={18} onClick={() => handleClick(1000)} >Skills</Button >
-                    <Button color="white" colorScheme={'yellow'} bg={'none'} fontSize={18} onClick={() => handleClick(1880)} >Projects</Button >
+                    <Button color="white" colorScheme={'yellow'} bg={'none'} fontSize={18} onClick={() => handleClick(950)} >Skills</Button >
+                    <Button color="white" colorScheme={'yellow'} bg={'none'} fontSize={18} onClick={() => handleClick(1600)} >Projects</Button >
                     <Button color="white" colorScheme={'yellow'} bg={'none'} fontSize={18} onClick={() => handleClick(4100)} >Contact</Button >
                     <Button colorScheme='yellow' fontSize={16} fontWeight={'bold'} gap={2} as='a' href='https://drive.google.com/file/d/1Y5zCHEVq8jYXvszYZY-HwaIwCzxPFFzl/view?usp=sharing'><FaFileAlt />Resume</Button>
                 </Box> :
@@ -56,17 +81,23 @@ const Navbar = () => {
                 }
             </Box>
             {isTrue ?
-                <Box bgGradient='linear(to-r,black, midnightblue )' border={'0px solid red'} p={'15px 15px 35px 15px'} display='grid' gap='20px' behavior='smooth'>
+                <Box
+                    transform="none"
+                    background={'rgba(102, 178, 255, 0.3)'}
+                    backdropFilter='blur(10px)'
+                    p={'15px 15px 35px 15px'}
+                    display='grid' gap='20px'
+                    behavior='smooth'>
                     <Heading size={'md'} display={'flex'} m='auto' gap={'10px'} w='40%' alignItems='center' justifyContent={'start'} onClick={() => handleClick(0)} >
                         <FaHome /> <span>Home</span>
                     </Heading>
-                    <Heading size={'md'} display={'flex'} m='auto' gap={'10px'} w='40%' alignItems='center' justifyContent={'start'} onClick={() => handleClick(570)} >
+                    <Heading size={'md'} display={'flex'} m='auto' gap={'10px'} w='40%' alignItems='center' justifyContent={'start'} onClick={() => handleClick(530)} >
                         <FaInfoCircle /> <span>About</span>
                     </Heading>
-                    <Heading size={'md'} display={'flex'} m='auto' gap={'10px'} w='40%' alignItems='center' justifyContent={'start'} onClick={() => handleClick(1190)} >
+                    <Heading size={'md'} display={'flex'} m='auto' gap={'10px'} w='40%' alignItems='center' justifyContent={'start'} onClick={() => handleClick(1150)} >
                         <FaBookOpen /> <span>Skills</span>
                     </Heading>
-                    <Heading size={'md'} display={'flex'} m='auto' gap={'10px'} w='40%' alignItems='center' justifyContent={'start'} onClick={() => handleClick(3080)} >
+                    <Heading size={'md'} display={'flex'} m='auto' gap={'10px'} w='40%' alignItems='center' justifyContent={'start'} onClick={() => handleClick(2010)} >
                         <FaWhmcs /><span>Projects</span>
                     </Heading>
                     <Heading size={'md'} display={'flex'} m='auto' gap={'10px'} w='40%' alignItems='center' justifyContent={'start'} onClick={() => handleClick(5400)} >
