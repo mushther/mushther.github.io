@@ -91,13 +91,13 @@ const Navbar = () => {
                     <Heading size={'md'} display={'flex'} m='auto' gap={'10px'} w='40%' alignItems='center' justifyContent={'start'} onClick={() => handleClick(0)} >
                         <FaHome /> <span>Home</span>
                     </Heading>
-                    <Heading size={'md'} display={'flex'} m='auto' gap={'10px'} w='40%' alignItems='center' justifyContent={'start'} onClick={() => handleClick(530)} >
+                    <Heading size={'md'} display={'flex'} m='auto' gap={'10px'} w='40%' alignItems='center' justifyContent={'start'} onClick={() => handleClick(510)} >
                         <FaInfoCircle /> <span>About</span>
                     </Heading>
-                    <Heading size={'md'} display={'flex'} m='auto' gap={'10px'} w='40%' alignItems='center' justifyContent={'start'} onClick={() => handleClick(1150)} >
+                    <Heading size={'md'} display={'flex'} m='auto' gap={'10px'} w='40%' alignItems='center' justifyContent={'start'} onClick={() => handleClick(1100)} >
                         <FaBookOpen /> <span>Skills</span>
                     </Heading>
-                    <Heading size={'md'} display={'flex'} m='auto' gap={'10px'} w='40%' alignItems='center' justifyContent={'start'} onClick={() => handleClick(2010)} >
+                    <Heading size={'md'} display={'flex'} m='auto' gap={'10px'} w='40%' alignItems='center' justifyContent={'start'} onClick={() => handleClick(1990)} >
                         <FaWhmcs /><span>Projects</span>
                     </Heading>
                     <Heading size={'md'} display={'flex'} m='auto' gap={'10px'} w='40%' alignItems='center' justifyContent={'start'} onClick={() => handleClick(5400)} >

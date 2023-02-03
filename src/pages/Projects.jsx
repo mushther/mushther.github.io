@@ -54,7 +54,7 @@ const Projects = () => {
                     ProjectDiscription='HealthCare is an Appointment booking website.Here users can login, book Appointment doctor`s wise and aslo check booking status.'
                     ProjectTech='HTML,CSS,Javascript,React,Chakra UI'
                     Src_Git={'https://github.com/mushther/reactJsApp/tree/main/Apps/project-2/bookappointment'}
-                    Src_netlify={'https://admirable-blini-b833e7.netlify.app/'}
+                    Src_netlify={'https://brilliant-starship-daa4be.netlify.app/'}
                 />
                 {/* <ProjectCard
                     PNG={PNG5}
