@@ -1,19 +1,38 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { Button, FormLabel, Input, Textarea, useMediaQuery } from '@chakra-ui/react';
+import { Button, FormLabel, Input, Textarea, useMediaQuery, useToast } from '@chakra-ui/react';
 import { FaPaperPlane } from 'react-icons/fa';
 
 export const ContactForm = () => {
+    const toast = useToast();
+    const [isLoading, setIsLoading] = useState(false)
     const [isLargerThan480] = useMediaQuery('(min-width: 681px)');
 
-    const form = useRef();
+    const handleClick = (n) => {
+        window.scrollTo({
+            top: n,
+            left: 0,
+            behavior: 'smooth',
+            transition: '1s'
+        });
+    }
 
+    const form = useRef();
+    //console.log(form.current);
     const sendEmail = (e) => {
         e.preventDefault();
-
+        setIsLoading(true);
         emailjs.sendForm('service_ftc8bwv', 'template_cs78nm7', form.current, 'hNojCUlgZkE3wBLQi')
             .then((result) => {
-                // console.log(result.text);
+                setIsLoading(false);
+                toast({
+                    title: 'Message sent Successfully.',
+                    description: "Thank you for contacting me.",
+                    status: 'success',
+                    duration: 9000,
+                    isClosable: true
+                })
+                handleClick(0)
             }, (error) => {
                 console.log(error.text);
             });
@@ -35,7 +54,7 @@ export const ContactForm = () => {
             <FormLabel>Message</FormLabel>
             <Textarea position={'none'} name="message" placeholder={'Message'} />
             <FormLabel></FormLabel>
-            <Button position={'none'} type='submit' w={isLargerThan480 ? "" : '100%'} colorScheme='yellow' gap={3}>Send Message <FaPaperPlane /></Button>
+            <Button position={'none'} type='submit' isLoading={isLoading} w={isLargerThan480 ? "" : '100%'} colorScheme='yellow' gap={3}>Send Message <FaPaperPlane /></Button>
 
         </form>
     );

@@ -46,7 +46,7 @@ const Sidenav = () => {
                     <FaHome onClick={() => handleClick(0)} />
                     <FaInfoCircle onClick={() => handleClick(isLargerThan480 ? 500 : 600)} />
                     <FaBookOpen onClick={() => handleClick(isLargerThan480 ? 1000 : 1190)} />
-                    <FaWhmcs onClick={() => handleClick(isLargerThan480 ? 1880 : 3080)} />
+                    <FaWhmcs onClick={() => handleClick(isLargerThan480 ? 1600 : 3080)} />
                     <MdContactPhone onClick={() => handleClick(isLargerThan480 ? 4100 : 5400)} />
                     <FaArrowAltCircleLeft onClick={handleToggle1} />
                 </Box>
