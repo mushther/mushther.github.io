@@ -12,7 +12,7 @@ const Home = () => {
 
     const [isLargerThan480] = useMediaQuery('(min-width: 681px)');
     const [text] = useTypewriter({
-        words: ['Full-stack Web developer'],
+        words: ['Front-End Web Developer'],
         loop: 0
     })
 

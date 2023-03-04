@@ -71,7 +71,7 @@ const Navbar = () => {
                     <Button color="white" colorScheme={'yellow'} bg={'none'} fontSize={18} onClick={() => handleClick(950)} >Skills</Button >
                     <Button color="white" colorScheme={'yellow'} bg={'none'} fontSize={18} onClick={() => handleClick(1600)} >Projects</Button >
                     <Button color="white" colorScheme={'yellow'} bg={'none'} fontSize={18} onClick={() => handleClick(4100)} >Contact</Button >
-                    <Button colorScheme='yellow' fontSize={16} fontWeight={'bold'} gap={2} as='a' href='https://drive.google.com/file/d/1Y5zCHEVq8jYXvszYZY-HwaIwCzxPFFzl/view?usp=sharing'><FaFileAlt />Resume</Button>
+                    <Button colorScheme='yellow' fontSize={16} fontWeight={'bold'} gap={2} as='a' href='https://drive.google.com/file/d/1XnYSV5pnFH8VF8DubCd_3iIslWvPDF71/view?usp=sharing'><FaFileAlt />Resume</Button>
                 </Box> :
                     <Box>
                         {isTrue ?
