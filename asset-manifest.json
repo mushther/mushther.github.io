@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/static/css/main.f9673443.css",
-    "main.js": "/static/js/main.7868a53f.js",
+    "main.js": "/static/js/main.7792b490.js",
     "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
     "static/media/Deccon-Chronile-homeage.png": "/static/media/Deccon-Chronile-homeage.353927dda11968f8556c.png",
     "static/media/boatlife.png": "/static/media/boatlife.70763911dddee33a7220.png",
-    "static/media/Mushther-Hussain-Resume.pdf": "/static/media/Mushther-Hussain-Resume.58aaca290e739534d301.pdf",
+    "static/media/Mushther-Hussain-Resume.pdf": "/static/media/Mushther-Hussain-Resume.5ecf242fc7f7867585bc.pdf",
     "static/media/wrike-homepage.png": "/static/media/wrike-homepage.30e7d854850267e03722.png",
     "static/media/Healthcare-homepage.png": "/static/media/Healthcare-homepage.276b7e4c4fc07cab95b3.png",
     "static/media/noteApp_logo.png": "/static/media/noteApp_logo.a092331baa31a8e763e4.png",
@@ -18,11 +18,11 @@
     "static/media/JAVASCRIPT-logo.png": "/static/media/JAVASCRIPT-logo.1ccd6ef9bb1f9c84ef00.png",
     "index.html": "/index.html",
     "main.f9673443.css.map": "/static/css/main.f9673443.css.map",
-    "main.7868a53f.js.map": "/static/js/main.7868a53f.js.map",
+    "main.7792b490.js.map": "/static/js/main.7792b490.js.map",
     "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f9673443.css",
-    "static/js/main.7868a53f.js"
+    "static/js/main.7792b490.js"
   ]
 }
